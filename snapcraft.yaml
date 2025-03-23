@@ -1,16 +1,16 @@
-name: [Snap Name] # you probably want to 'snapcraft register <name>'
+name: crypt-legacy # you probably want to 'snapcraft register <name>'
 base: core22 # the base snap is the execution environment for this snap
 version: '1.0.0' # just for humans, typically '1.2+git' or '1.3.2'
-title: [Game Name]
-summary: [Short Summary]
-description: [Description]
+title: Crypt Legacy Legends
+summary: Solve the mysteries of crypts!
+description: Explore ancient crypts filled with traps, puzzles, and guarded treasures in breathtaking historical expeditions.
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
-  [Snap Name]:
-    command: bin/[Snap Name]-bin
+  crypt-legacy:
+    command: bin/crypt-legacy-bin
     extensions: [gnome]
     plugs:
       - network
@@ -22,8 +22,8 @@ layout:
     bind: $SNAP/gnome-platform/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/webkit2gtk-4.0
 
 parts:
-  [Snap Name]:
+  crypt-legacy:
     plugin: dump
     source: .
     organize:
-      [Snap Name]-bin: bin/
+      crypt-legacy-bin: bin/
